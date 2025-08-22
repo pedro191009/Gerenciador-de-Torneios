@@ -1,11 +1,12 @@
 print('Olá, bem vindo ao meu gerenciador de torneios')
 nome = input('Primeiro me diga seu nome: ')
-print(f'Olá {nome}, espero que goste do meu gerenciador de torneios')
+print(f'Olá {nome}, espero que goste do nosso gerenciador de torneios')
+print('Feito por Pedro Rodrigues e Fabricio Nunes')
 
 print('\n--- MENU PRINCIPAL ---')
 print('1- Mata-Mata')
-print('2- SEMIS')
-print('3- FINAL')
+print('2- Em andamento...') #cuzao, aqui vao ser os modos de torneio, pique, mata mata, liga, fase de grupos etc, ai nem tem como fazer aquilo aqui
+print('3- Em andamento...') #mas dentro do mata mata tem como, ai fica dahora
 
 escolha_usuario = int(input('Escolha qual torneio você quer fazer: '))
 
@@ -43,7 +44,7 @@ elif escolha_usuario == 3:
     print('\nEntão vamos lá! Quais serão os nomes dos times:')
     times = []  
     for i in range(1, 3):  # 2 times
-        time = input(f'Digite o nome do time {i}: ')
+        time = input(f'Digite o nome do time {i}: ') #me explica isso daqui na linha 46 melhor fazendo favor
         times.append(time)
 
 
