@@ -1,1 +1,43 @@
 #CÓDIGO
+print('Olá, bem vindo ao meu gerenciador de torneios')
+nome_usuario = input('Primeiro me diga seu nome: ')
+print(f'Olá {nome_usuario}, espero que goste do meu gerenciador de torneios')
+print('1- Mata-Mata')
+print('2- Em andamento')
+print('3- Em andamento')
+escolha_usuario = float(input('escolha qual torneio voce quer fazer: '))
+
+if escolha_usuario == 1:
+    print(f'boa escolha {nome_usuario}')
+    print(f'Voce ja sabe como funciona?')
+    print('1- Começar')
+    print('2- Como funciona isso ai adm? Explicação modo de torneio.')
+    escolha2 = float(input('O que voce quer fazer?'))
+
+    if escolha2 == 1:
+        print('Entao vamos lá, quais serao os nomes dos times')
+        time1 = input('digite o nome do time 1')
+        time2 = input('digite o nome do time 2')
+        time3 = input('digite o nome do time 3')
+        time4 = input('digite o nome do time 4')
+        time5 = input('digite o nome do time 5')
+        time6 = input('digite o nome do time 6')
+        time7 = input('digite o nome do time 7')
+        time8 = input('digite o nome do time 8')
+    
+    elif escolha2 == 2:
+        print(f'Fica tranquilo meu mano {nome_usuario}, vou te explicar certinho')
+        print('Em um torneio estilo mata-mata, os participantes se enfrentam em partidas eliminatórias. Quem vence avança, quem perde está fora. O processo continua até restar apenas um campeão.') 
+
+    else:
+        print('Opção invalida meu mano')
+
+elif escolha_usuario == 2:
+    print('Esta opção ainda está sendo desenvolvida...')
+
+elif escolha_usuario == 3:
+    print('Esta opção ainda está sendo desenvolvida...')
+
+else:
+    print
+    print('Opção invalida meu mano')
