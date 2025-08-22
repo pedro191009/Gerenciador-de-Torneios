@@ -1,68 +1,55 @@
 print('Olá, bem vindo ao meu gerenciador de torneios')
-nome_usuario = input('Primeiro me diga seu nome: ')
-print(f'Olá {nome_usuario}, espero que goste do meu gerenciador de torneios')
+nome = input('Primeiro me diga seu nome: ')
+print(f'Olá {nome}, espero que goste do meu gerenciador de torneios')
+
+print('\n--- MENU PRINCIPAL ---')
 print('1- Mata-Mata')
-print('2- Em andamento')
-print('3- Em andamento')
-escolha_usuario = float(input('escolha qual torneio voce quer fazer: '))
+print('2- SEMIS')
+print('3- FINAL')
+
+escolha_usuario = int(input('Escolha qual torneio você quer fazer: '))
 
 if escolha_usuario == 1:
-    print(f'boa escolha {nome_usuario}')
-    print(f'Voce ja sabe como funciona?')
+    print(f'Boa escolha {nome}!')
+    print('\nVocê já sabe como funciona?')
     print('1- Começar')
-    print('2- Como funciona isso ai adm? Explicação modo de torneio.')
-    escolha2 = float(input('O que voce quer fazer?'))
+    print('2- Como funciona isso aí, adm? Explicação modo de torneio.')
+    escolha2 = int(input('O que você quer fazer? '))
 
     if escolha2 == 1:
-        print('Entao vamos lá, quais serao os nomes dos times')
-        time1 = input('digite o nome do time 1: ')
-        time2 = input('digite o nome do time 2: ')
-        time3 = input('digite o nome do time 3: ')
-        time4 = input('digite o nome do time 4: ')
-        time5 = input('digite o nome do time 5: ')
-        time6 = input('digite o nome do time 6: ')
-        time7 = input('digite o nome do time 7: ')
-        time8 = input('digite o nome do time 8: ')
+        print('\nEntão vamos lá! Quais serão os nomes dos times:')
+        times = []
+        for i in range(1, 9):  # 8 times
+            time = input(f'Digite o nome do time {i}: ')
+            times.append(time)
 
-        print('Quartas de Final')
-        gol0 = float(input(f'Quantos gols o {time1} fez: '))
-        gol1 = float(input(f'Quantos gols o {time2} fez: '))
-        if gol0 > gol1:
-            semi1 = time1
-            print(f'{time1} avança')
-        elif gol0 == gol1:
-            print(f'1- {time1}')
-            print(f'2- {time2}')
-            escolha3 = float(input('Empate, penalidades maximas, quem avança?'))
-            
-            if escolha3 == 1:
-                semi1 = time1
-                print(f'{time1} avança')
-            
-            elif escolha3 == 2:
-                semi1 = time2
-                print(f'{time2} avança')
+        print("\nTimes cadastrados com sucesso:")
+        for t in times:
+            print("-", t)
 
-            else:
-                semi1 = time1
-                print(f'{time1} avança')
-
-        else:
-            semi1 = time2
-            print(f'{time2} avança')
-    
     elif escolha2 == 2:
-        print(f'Fica tranquilo meu mano {nome_usuario}, vou te explicar certinho')
-        print('Em um torneio estilo mata-mata, os participantes se enfrentam em partidas eliminatórias. Quem vence avança, quem perde está fora. O processo continua até restar apenas um campeão.') 
-
+        print(f'\nFica tranquilo meu mano {nome}, vou te explicar certinho:')
+        print('No mata-mata, os times se enfrentam em partidas eliminatórias.')
+        print('Quem vence avança, quem perde tá fora.')
+        print('Isso continua até sobrar só um campeão.')
     else:
-        print('Opção invalida meu mano')
+        print('Opção inválida meu mano.')
 
 elif escolha_usuario == 2:
     print('Esta opção ainda está sendo desenvolvida...')
 
 elif escolha_usuario == 3:
-    print('Esta opção ainda está sendo desenvolvida...')
+    print(f'{nome}, blz meu nobre, vamos para as finais')
+    print('\nEntão vamos lá! Quais serão os nomes dos times:')
+    times = []  
+    for i in range(1, 3):  # 2 times
+        time = input(f'Digite o nome do time {i}: ')
+        times.append(time)
+
 
 else:
-    print('Opção invalida meu mano')
+    print('Opção inválida meu mano.')
+    
+#\n é quebra de linha
+#.append é a lista
+#range vai fazer um looping
