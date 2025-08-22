@@ -19,14 +19,70 @@ if escolha_usuario == 1:
 
     if escolha2 == 1:
         print('\nEntão vamos lá! Quais serão os nomes dos times:')
-        times = []
-        for i in range(1, 9):  # 8 times
-            time = input(f'Digite o nome do time {i}: ')
-            times.append(time)
+        time1 = input('digite o nome do time 1')
+        time2 = input('digite o nome do time 2')
+        time3 = input('digite o nome do time 3')
+        time4 = input('digite o nome do time 4')
+        time5 = input('digite o nome do time 5')
+        time6 = input('digite o nome do time 6')
+        time7 = input('digite o nome do time 7')
+        time8 = input('digite o nome do time 8')
 
         print("\nTimes cadastrados com sucesso:")
-        for t in times:
-            print("-", t)
+
+        print('Quartas de Final')
+        gol0 = float(input(f'Quantos gols o {time1} fez: '))
+        gol1 = float(input(f'Quantos gols o {time2} fez: '))
+        if gol0 > gol1:
+            semi1 = time1
+            print(f'{time1} avança')
+        elif gol0 == gol1:
+            print(f'1- {time1}')
+            print(f'2- {time2}')
+            escolha3 = float(input('Empate, penalidades maximas, quem avança?'))
+            
+            if escolha3 == 1:
+                semi1 = time1
+                print(f'{time1} avança')
+            
+            elif escolha3 == 2:
+                semi1 = time2
+                print(f'{time2} avança')
+
+            else:
+                semi1 = time1
+                print(f'{time1} avança')
+
+        else:
+            semi1 = time2
+            print(f'{time2} avança')
+            
+        #Jogo 2 Quartas de Final
+        gol2 = float(input(f'Quantos gols o {time5} fez: '))
+        gol3 = float(input(f'Quantos gols o {time6} fez: '))
+        if gol2 > gol3:
+            semi2 = time5
+            print(f'{time5} avança')
+        elif gol2 == gol3:
+            print(f'1- {time5}')
+            print(f'2- {time6}')
+            escolha3 = float(input('Empate, penalidades maximas, quem avança?'))
+            
+            if escolha3 == 1:
+                semi2 = time5
+                print(f'{time5} avança')
+            
+            elif escolha3 == 2:
+                semi2 = time6
+                print(f'{time6} avança')
+
+            else:
+                semi2 = time6
+                print(f'{time6} avança')
+
+        else:
+            semi2 = time6
+            print(f'{time6} avança')
 
     elif escolha2 == 2:
         print(f'\nFica tranquilo meu mano {nome}, vou te explicar certinho:')
@@ -40,14 +96,8 @@ elif escolha_usuario == 2:
     print('Esta opção ainda está sendo desenvolvida...')
 
 elif escolha_usuario == 3:
-    print(f'{nome}, blz meu nobre, vamos para as finais')
-    print('\nEntão vamos lá! Quais serão os nomes dos times:')
-    times = []  
-    for i in range(1, 3):  # 2 times
-        time = input(f'Digite o nome do time {i}: ') #me explica isso daqui na linha 46 melhor fazendo favor
-        times.append(time)
-
-
+     print('Esta opção ainda está sendo desenvolvida...')
+    
 else:
     print('Opção inválida meu mano.')
     
